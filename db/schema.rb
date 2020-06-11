@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_014512) do
     t.string "document"
     t.string "email"
     t.string "phone"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.text "notes"
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false

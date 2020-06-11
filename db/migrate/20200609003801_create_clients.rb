@@ -6,7 +6,7 @@ class CreateClients < ActiveRecord::Migration[6.0]
       t.string :document
       t.string :email
       t.string :phone
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: true, foreign_key: true
       t.text :notes
       t.integer :status
 
