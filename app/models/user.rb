@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
     enum kind: [:salesman, :manager]
     enum status: [:active, :inactive]
-    has_many :comisions
+    has_many :comissions
     has_many :address
     has_many :clients
     has_many :product_quantities 
