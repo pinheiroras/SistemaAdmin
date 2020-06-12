@@ -46,7 +46,6 @@ RailsAdmin.config do |config|
       field  :discount
       field  :notes
       field  :product_quantities
-  
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -60,7 +59,6 @@ RailsAdmin.config do |config|
       field  :discount
       field  :notes
       field  :product_quantities
-  
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -79,7 +77,6 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-  
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -96,8 +93,6 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-  
-  
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -114,7 +109,6 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-  
     end
   end
   
@@ -131,7 +125,6 @@ RailsAdmin.config do |config|
     edit do
       field :product
       field :quantity
-  
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -147,21 +140,19 @@ RailsAdmin.config do |config|
       field  :discount
       field  :notes
       field  :product_quantities
-   
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
         end
       end
     end
-   
+
     edit do
       field  :client
       field  :sale_date
       field  :discount
       field  :notes
       field  :product_quantities
-   
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
@@ -169,7 +160,7 @@ RailsAdmin.config do |config|
       end
     end
   end
-   
+
   config.model Client do
     create do
       field  :name
@@ -180,14 +171,13 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-   
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
         end
       end
     end
-   
+
     edit do
       field  :name
       field  :company_name
@@ -197,15 +187,13 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-   
-   
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
         end
       end
     end
-   
+
     list do
       field  :name
       field  :company_name
@@ -215,24 +203,21 @@ RailsAdmin.config do |config|
       field  :notes
       field  :status
       field  :address
-   
     end
   end
-   
+
   config.model ProductQuantity do
     visible false
   end
-   
+
   config.model Address do
     visible false
   end
-   
-   
+
   config.model ProductQuantity do
     edit do
       field :product
       field :quantity
-   
       field :user_id, :hidden do
         default_value do
           bindings[:view]._current_user.id
