@@ -42,6 +42,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Sale do
+    navigation_icon 'fa fa-money'
     create do
       field  :client
       field  :sale_date
@@ -70,6 +71,7 @@ RailsAdmin.config do |config|
   end
   
   config.model Client do
+    parent User
     create do
       field  :name
       field  :company_name
@@ -121,7 +123,6 @@ RailsAdmin.config do |config|
   config.model Address do
     visible false
   end
-  
   
   config.model ProductQuantity do
     edit do
@@ -136,6 +137,8 @@ RailsAdmin.config do |config|
   end
   
   config.model Sale do
+    parent User
+    weight -2
     create do
       field  :client
       field  :sale_date
@@ -228,10 +231,17 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Discount do
+    parent Product
+  end
+
+  config.model Comission do
+    parent User
+    weight -1
+  end
+
   config.navigation_static_links = {
     'OneBitCode' => 'https://onebitcode.com'
   }
-   
-  config.navigation_static_label = "Lins Úteis"
-  
+  config.navigation_static_label = 'Lins Úteis'
 end
