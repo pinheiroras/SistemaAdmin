@@ -27,9 +27,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'rails_admin', '~> 2.0', '>= 2.0.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+# Autenticação
 gem 'devise', '~> 4.7', '>= 4.7.1'
+# Permissão de acesso
 gem 'cancancan'
+# Upload de Arquivos
 gem 'carrierwave'
+# Customizando a aparência do nosso Admin
+gem 'rails_admin_rollincode', '~> 1.0'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
