@@ -35,7 +35,10 @@ gem 'cancancan'
 gem 'carrierwave'
 # Customizando a aparência do nosso Admin
 gem 'rails_admin_rollincode', '~> 1.0'
-
+# Gem para gerar os pdfs
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
